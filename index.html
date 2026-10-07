@@ -45,7 +45,7 @@ select{width:100%;margin-top:5px;padding:12px 8px;font:inherit;font-size:.95rem;
 .res{padding:14px 0;border-top:1px solid var(--line)}
 .res:first-of-type{border-top:0;padding-top:0}
 .res .n{font-weight:600;color:var(--ink)}
-.res .big{font-size:2rem;font-weight:700;letter-spacing:-.03em;color:#111}
+.res .big{font-size:2rem;font-weight:700;letter-spacing:-.03em;color:var(--acc)}
 .res .sub{color:var(--ink);font-size:.9rem;font-weight:400;opacity:.7}
 :root[data-theme="dark"] .res .big{color:var(--acc)}
 :root[data-theme="dark"] .res .sub{color:var(--mute);opacity:1}
@@ -209,7 +209,7 @@ function renderMode(){
   $('m-hour').setAttribute('aria-pressed',S.mode==='hour');
   $('m-month').setAttribute('aria-pressed',S.mode==='month');
   $('thumb').classList.toggle('r',S.mode==='month');
-  $('wl').textContent=S.mode==='hour'?'Stundenlohn (€)':'Monatsgehalt brutto (€)';
+  $('wl').textContent=S.mode==='hour'?'Stundenlohn (CHF)':'Monatsgehalt brutto (CHF)';
 }
 $('m-hour').onclick=()=>{S.mode='hour';renderMode();renderOut();save()};
 $('m-month').onclick=()=>{S.mode='month';renderMode();renderOut();save()};
